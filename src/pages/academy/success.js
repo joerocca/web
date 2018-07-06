@@ -3,11 +3,6 @@ import AcademyNavigation from '../../components/AcademyNavigation'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Img from 'gatsby-image'
 
-// import portraitKristen from '../../images/people/kristen.jpg'
-// import portraitBrandyn from '../../images/people/brandyn.jpg'
-// import portraitValeria from '../../images/people/valeria.jpg'
-// // import portraitShaun from '../../images/people/shaun.jpg'
-
 const Card = ({ id, name, title, children, sizes }) => (
   <div className="card" id={`${id}`}>
      <Img
