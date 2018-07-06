@@ -3,16 +3,17 @@ import AcademyNavigation from '../../components/AcademyNavigation'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import Img from 'gatsby-image'
 
-import portraitKristen from '../../images/people/kristen.jpg'
-import portraitBrandyn from '../../images/people/brandyn.jpg'
-import portraitValeria from '../../images/people/valeria.jpg'
-// import portraitShaun from '../../images/people/shaun.jpg'
+// import portraitKristen from '../../images/people/kristen.jpg'
+// import portraitBrandyn from '../../images/people/brandyn.jpg'
+// import portraitValeria from '../../images/people/valeria.jpg'
+// // import portraitShaun from '../../images/people/shaun.jpg'
 
-const Card = ({ id, name, title, children, imgData }) => (
+const Card = ({ id, name, title, children, sizes }) => (
   <div className="card" id={`${id}`}>
-    <Img
-      sizes={{ ...imgData, aspectRatio: 1.6 }}
+     <Img
+      sizes={sizes}
       alt={`A portrait of ${name}`}
+      title={`A portrait of ${name}`}
     />
     <div className="tab">
       <input id={`tab-${id}`} type="checkbox" name="tabs" />
@@ -28,7 +29,7 @@ const Card = ({ id, name, title, children, imgData }) => (
   </div>
 )
 
-const SuccessStoriesPage = () => (
+const SuccessStoriesPage = (props) => (
   <div className="AcademyPage Success">
     <AcademyNavigation />
     <div className="wrap">
@@ -37,7 +38,7 @@ const SuccessStoriesPage = () => (
         <Card
           id="kristen"
           name="Kristen Swan-Grashel"
-          // imgData={props.data.kristen.sizes}
+          sizes={props.data.kristen.sizes}
         >
         "When I first thought about going to a code school to change
         careers, I knew it would be hard, especially with three young
@@ -48,10 +49,10 @@ const SuccessStoriesPage = () => (
         Achieving a goal you've worked hard for."
         </Card>
 
-        <Card
+         <Card
           id="brandyn"
           name="Brandyn Sullins"
-          // imgData={props.data.brandyn.sizes}
+          sizes={props.data.brandyn.sizes}
         >
         "This was one of the most intimidating, exhausting, and stressful
         challenges I have ever taken on and I would not change my decision
@@ -63,7 +64,7 @@ const SuccessStoriesPage = () => (
         <Card
           id="valeria"
           name="Valeria Benetti"
-          // imgData={props.data.valeria.sizes}
+          sizes={props.data.valeria.sizes}
         >
         "Of all the choices I have ever made, coming to this has to be one
         of the greatest choices that my brain came up with. Not one day goes
@@ -71,16 +72,16 @@ const SuccessStoriesPage = () => (
         teaching me the valuable skill sets that I now know."
         </Card>
 
-        <Card
+         {/* <Card
           id="shaun"
           name="Shaun Hailey"
-          // imgData={props.data.shaun.sizes}
+          sizes={props.data.shaun.sizes}
         >
         "I came to into this with zero programming background whatsoever.
         After over a decade in finance, a layoff put me into a position
         where I could explore a new career. This finally allowed me to do
         what I had wanted to do for many years--learn how to code."
-        </Card>
+        </Card> */}
 
       </div>
 
@@ -96,29 +97,29 @@ const SuccessStoriesPage = () => (
   </div>
 )
 
-// export const pageQuery = graphql`
-//   query SuccessPageQuery {
-//     kristen: imageSharp(id: { regex: "/people/kristen/" }) {
-//       sizes(maxWidth: 416) {
-//         ...GatsbyImageSharpSizes
-//       }
-//     }
-//     brandyn: imageSharp(id: { regex: "/people/brandyn/" }) {
-//       sizes(maxWidth: 416) {
-//         ...GatsbyImageSharpSizes
-//       }
-//     }
-//     valeria: imageSharp(id: { regex: "/people/valeria/" }) {
-//       sizes(maxWidth: 416) {
-//         ...GatsbyImageSharpSizes
-//       }
-//     }
-//     shaun: imageSharp(id: { regex: "/people/shaun/" }) {
-//       sizes(maxWidth: 416) {
-//         ...GatsbyImageSharpSizes
-//       }
-//     }
-//   }
-// `
+export const pageQuery = graphql`
+  query SuccessPageQuery {
+    kristen: imageSharp(id: { regex: "/people/kristen/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    brandyn: imageSharp(id: { regex: "/people/brandyn/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    valeria: imageSharp(id: { regex: "/people/valeria/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+    shaun: imageSharp(id: { regex: "/people/shaun/" }) {
+      sizes(maxWidth: 416) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`
 
 export default SuccessStoriesPage
