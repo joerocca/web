@@ -22,13 +22,13 @@ const CommunityNetworkPage = props => (
       <ul className="companies">
         <li>
           <div className="logo">
-          <Img
-            title="PROforma"
-            alt="PROforma Logo"
-            sizes={props.data.proforma.sizes}
+            <Img
+              title="PROforma"
+              alt="PROforma Logo"
+              sizes={props.data.proforma.sizes}
             />
           </div>
-          <hr/>
+          <hr />
           <span className="supporter-tagline">Workforce Training</span>
         </li>
         <li>
@@ -36,25 +36,23 @@ const CommunityNetworkPage = props => (
             title="Carlton Fields"
             alt="Carlton Fields Logo"
             sizes={props.data.carltonFields.sizes}
-            />
-          <hr/>
+          />
+          <hr />
           <span className="supporter-tagline">Legal</span>
-
         </li>
         <li>
-        <div className="logo-half">
-          <Img
-            title="Frontify"
-            alt="Frontify Logo"
-            sizes={props.data.frontify.sizes}
+          <div className="logo-half">
+            <Img
+              title="Frontify"
+              alt="Frontify Logo"
+              sizes={props.data.frontify.sizes}
             />
           </div>
 
-          <hr/>
+          <hr />
           <span className="supporter-tagline">Branding</span>
-
         </li>
-       </ul>
+      </ul>
 
       {/* <h3>Why become part of our Hiring Network?</h3>
 

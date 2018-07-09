@@ -35,7 +35,10 @@ const CommunityNavigation = () => (
         </Link>
       </li>
       <li>
-        <a target="_blank" href="https://us16.campaign-archive.com/?e=[UNIQID]&u=f647da2f01497911d615aea80&id=dc4de93703">
+        <a
+          target="_blank"
+          href="https://us16.campaign-archive.com/?e=[UNIQID]&u=f647da2f01497911d615aea80&id=dc4de93703"
+        >
           <figure>
             <Icon name="hiring" />
           </figure>
